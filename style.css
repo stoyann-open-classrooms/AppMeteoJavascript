@@ -53,7 +53,9 @@ h1 {
 .bloc-info .temps {
     font-size: 40px;
 }
-
+.humidite{
+    font-size: 40px;
+}
 .bloc-info .temps::first-letter {
     text-transform: capitalize;
 }

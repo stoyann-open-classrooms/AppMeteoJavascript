@@ -8,6 +8,7 @@ let resultatsAPI;
 
 const temps = document.querySelector(".temps");
 const temperature = document.querySelector(".temperature");
+const humidity = document.querySelector(".humidite")
 const localisation = document.querySelector(".localisation");
 const heure = document.querySelectorAll('.heure-nom-prevision');
 const tempPourH = document.querySelectorAll(".heure-prevision-valeur");
@@ -45,6 +46,7 @@ function AppelAPI(long,lat) {
     
     temps.innerText = resultatsAPI.current.weather[0].description;
     temperature.innerText = `${Math.trunc(resultatsAPI.current.temp)}°`
+    humidity.innerText= `Humidité : ${resultatsAPI.current.humidity} %`;
     localisation.innerText = resultatsAPI.timezone;
 
     //les heures par tranche de trois avec leurs temperatures. 
